@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Controls</title>
+</head>
+<style>
+    body{
+        background-color: pink;
+    }
+    #myVideo{
+        border: 1px solid;
+    }
+   
+</style>
+<body>
+    <div style="text-align:center;">
+        <video id="myVideo" width="600" controls>
+            <source src="Waterfall.mp4" type="video/mp4">
+        
+        </video>
+        <br><br>
+        <button onclick="playVideo()">Play</button>
+        <button onclick="pauseVideo()">Pause</button>
+        <button onclick="resetVideo()">Reset</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+    </div>
+
+    <script>
+
+var video = document.getElementById("myVideo");
+
+function playVideo() {
+    video.play();
+}
+
+function pauseVideo() {
+    video.pause();
+}
+
+function resetVideo() {
+    video.pause();
+    video.currentTime = 0;
+}
+
+function makeBig() {
+    video.width = 800;
+}
+
+function makeSmall() {
+    video.width = 400;
+}
+
+function makeNormal() {
+    video.width = 600;
+}
+
+
+    </script>
+</body>
+</html>
